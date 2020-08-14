@@ -6,7 +6,13 @@ class Category extends Model {}
 
 Category.init(
   {
-    // define columns
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100]
+      }
+    }
   },
   {
     sequelize,
