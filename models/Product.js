@@ -7,7 +7,7 @@ const sequelize = require('../config/connection');
 class Product extends Model {}
 
 // set up fields and rules for Product model
-Product.build(
+Product.init(
   {
     product_name: {
       type: DataTypes.STRING,
