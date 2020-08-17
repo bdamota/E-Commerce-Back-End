@@ -45,6 +45,9 @@ router.get('/:id', (req, res) => {
       'price',
       'stock'
     ],
+    where: {
+      id: req.params.id
+    },
     include: [
       {
         model: Category,
